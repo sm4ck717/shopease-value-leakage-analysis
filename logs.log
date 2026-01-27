@@ -1,0 +1,1783 @@
+2026-01-18 22:54:35,448:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-01-18 22:54:35,451:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-01-18 22:54:35,451:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-01-18 22:54:35,451:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-01-18 22:56:39,519:INFO:PyCaret ClassificationExperiment
+2026-01-18 22:56:39,520:INFO:Logging name: clf-default-name
+2026-01-18 22:56:39,520:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-01-18 22:56:39,521:INFO:version 3.3.2
+2026-01-18 22:56:39,521:INFO:Initializing setup()
+2026-01-18 22:56:39,521:INFO:self.USI: 7b89
+2026-01-18 22:56:39,521:INFO:self._variable_keys: {'fold_shuffle_param', 'fix_imbalance', 'y_train', 'y_test', 'X_test', 'USI', 'exp_id', 'y', 'fold_generator', 'pipeline', 'fold_groups_param', 'gpu_n_jobs_param', '_available_plots', 'gpu_param', 'target_param', 'X', 'logging_param', 'n_jobs_param', 'seed', 'data', 'idx', 'exp_name_log', '_ml_usecase', 'is_multiclass', 'X_train', 'log_plots_param', 'memory', 'html_param'}
+2026-01-18 22:56:39,521:INFO:Checking environment
+2026-01-18 22:56:39,523:INFO:python_version: 3.10.5
+2026-01-18 22:56:39,523:INFO:python_build: ('tags/v3.10.5:f377153', 'Jun  6 2022 16:14:13')
+2026-01-18 22:56:39,523:INFO:machine: AMD64
+2026-01-18 22:56:39,523:INFO:platform: Windows-10-10.0.26100-SP0
+2026-01-18 22:56:39,529:INFO:Memory: svmem(total=7887228928, available=998240256, percent=87.3, used=6888988672, free=998240256)
+2026-01-18 22:56:39,529:INFO:Physical Core: 6
+2026-01-18 22:56:39,529:INFO:Logical Core: 12
+2026-01-18 22:56:39,530:INFO:Checking libraries
+2026-01-18 22:56:39,530:INFO:System:
+2026-01-18 22:56:39,530:INFO:    python: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
+2026-01-18 22:56:39,530:INFO:executable: c:\Users\shrey\AppData\Local\Programs\Python\Python310\python.exe
+2026-01-18 22:56:39,530:INFO:   machine: Windows-10-10.0.26100-SP0
+2026-01-18 22:56:39,530:INFO:PyCaret required dependencies:
+2026-01-18 22:56:39,546:INFO:                 pip: 22.2.2
+2026-01-18 22:56:39,548:INFO:          setuptools: 58.1.0
+2026-01-18 22:56:39,548:INFO:             pycaret: 3.3.2
+2026-01-18 22:56:39,548:INFO:             IPython: 8.4.0
+2026-01-18 22:56:39,548:INFO:          ipywidgets: 8.0.4
+2026-01-18 22:56:39,548:INFO:                tqdm: 4.64.0
+2026-01-18 22:56:39,548:INFO:               numpy: 1.26.4
+2026-01-18 22:56:39,548:INFO:              pandas: 2.1.4
+2026-01-18 22:56:39,548:INFO:              jinja2: 3.1.2
+2026-01-18 22:56:39,549:INFO:               scipy: 1.10.1
+2026-01-18 22:56:39,549:INFO:              joblib: 1.3.2
+2026-01-18 22:56:39,549:INFO:             sklearn: 1.4.2
+2026-01-18 22:56:39,549:INFO:                pyod: 2.0.3
+2026-01-18 22:56:39,549:INFO:            imblearn: 0.12.4
+2026-01-18 22:56:39,549:INFO:   category_encoders: 2.6.3
+2026-01-18 22:56:39,549:INFO:            lightgbm: 3.3.5
+2026-01-18 22:56:39,549:INFO:               numba: 0.58.1
+2026-01-18 22:56:39,549:INFO:            requests: 2.28.1
+2026-01-18 22:56:39,549:INFO:          matplotlib: 3.10.3
+2026-01-18 22:56:39,549:INFO:          scikitplot: 0.3.7
+2026-01-18 22:56:39,549:INFO:         yellowbrick: 1.5
+2026-01-18 22:56:39,549:INFO:              plotly: 5.24.1
+2026-01-18 22:56:39,549:INFO:    plotly-resampler: Not installed
+2026-01-18 22:56:39,549:INFO:             kaleido: 0.2.1
+2026-01-18 22:56:39,549:INFO:           schemdraw: 0.15
+2026-01-18 22:56:39,549:INFO:         statsmodels: 0.13.5
+2026-01-18 22:56:39,549:INFO:              sktime: 0.26.0
+2026-01-18 22:56:39,549:INFO:               tbats: 1.1.3
+2026-01-18 22:56:39,549:INFO:            pmdarima: 2.0.4
+2026-01-18 22:56:39,549:INFO:              psutil: 5.9.1
+2026-01-18 22:56:39,549:INFO:          markupsafe: 2.1.1
+2026-01-18 22:56:39,549:INFO:             pickle5: Not installed
+2026-01-18 22:56:39,549:INFO:         cloudpickle: 3.0.0
+2026-01-18 22:56:39,549:INFO:         deprecation: 2.1.0
+2026-01-18 22:56:39,549:INFO:              xxhash: 3.4.1
+2026-01-18 22:56:39,549:INFO:           wurlitzer: Not installed
+2026-01-18 22:56:39,549:INFO:PyCaret optional dependencies:
+2026-01-18 22:56:42,398:INFO:                shap: 0.47.0
+2026-01-18 22:56:42,398:INFO:           interpret: Not installed
+2026-01-18 22:56:42,398:INFO:                umap: 0.5.7
+2026-01-18 22:56:42,398:INFO:     ydata_profiling: 4.9.0
+2026-01-18 22:56:42,398:INFO:  explainerdashboard: Not installed
+2026-01-18 22:56:42,398:INFO:             autoviz: 0.1.58
+2026-01-18 22:56:42,398:INFO:           fairlearn: Not installed
+2026-01-18 22:56:42,398:INFO:          deepchecks: Not installed
+2026-01-18 22:56:42,398:INFO:             xgboost: 1.6.2
+2026-01-18 22:56:42,398:INFO:            catboost: 1.2.3
+2026-01-18 22:56:42,398:INFO:              kmodes: 0.12.2
+2026-01-18 22:56:42,398:INFO:             mlxtend: 0.23.4
+2026-01-18 22:56:42,398:INFO:       statsforecast: Not installed
+2026-01-18 22:56:42,398:INFO:        tune_sklearn: Not installed
+2026-01-18 22:56:42,398:INFO:                 ray: Not installed
+2026-01-18 22:56:42,399:INFO:            hyperopt: Not installed
+2026-01-18 22:56:42,399:INFO:              optuna: Not installed
+2026-01-18 22:56:42,399:INFO:               skopt: Not installed
+2026-01-18 22:56:42,399:INFO:              mlflow: Not installed
+2026-01-18 22:56:42,399:INFO:              gradio: Not installed
+2026-01-18 22:56:42,399:INFO:             fastapi: 0.115.7
+2026-01-18 22:56:42,399:INFO:             uvicorn: 0.34.0
+2026-01-18 22:56:42,399:INFO:              m2cgen: Not installed
+2026-01-18 22:56:42,399:INFO:           evidently: Not installed
+2026-01-18 22:56:42,399:INFO:               fugue: Not installed
+2026-01-18 22:56:42,399:INFO:           streamlit: 1.38.0
+2026-01-18 22:56:42,399:INFO:             prophet: 1.1.6
+2026-01-18 22:56:42,399:INFO:None
+2026-01-18 22:56:42,399:INFO:Set up data.
+2026-01-18 22:56:42,541:INFO:Set up folding strategy.
+2026-01-18 22:56:42,541:INFO:Set up train/test split.
+2026-01-18 22:56:42,672:INFO:Set up index.
+2026-01-18 22:56:42,683:INFO:Assigning column types.
+2026-01-18 22:56:42,691:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-01-18 22:56:42,771:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-01-18 22:56:42,801:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-01-18 22:56:42,872:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:47,297:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:50,666:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-01-18 22:56:50,666:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-01-18 22:56:50,707:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:50,710:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:50,712:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-01-18 22:56:50,769:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-01-18 22:56:50,801:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:50,801:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:50,875:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-01-18 22:56:50,910:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:50,917:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:50,918:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-01-18 22:56:51,030:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:51,038:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:51,149:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:51,158:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:51,158:INFO:Preparing preprocessing pipeline...
+2026-01-18 22:56:51,158:INFO:Set up simple imputation.
+2026-01-18 22:56:51,173:INFO:Set up encoding of categorical features.
+2026-01-18 22:56:51,173:INFO:Set up imbalanced handling.
+2026-01-18 22:56:51,173:INFO:Set up feature normalization.
+2026-01-18 22:56:52,287:INFO:Finished creating preprocessing pipeline.
+2026-01-18 22:56:52,296:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\shrey\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['customer_tenure_months',
+                                             'order_value', 'quantity',
+                                             'discount_percent', 'channel_cost',
+                                             'delivery_time_days'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False...
+                                                              return_df=True,
+                                                              use_cat_names=True,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy=0.4)))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2026-01-18 22:56:52,296:INFO:Creating final display dataframe.
+2026-01-18 22:56:52,902:INFO:Setup _display_container:                     Description  \
+0                    Session id   
+1                        Target   
+2                   Target type   
+3           Original data shape   
+4        Transformed data shape   
+5   Transformed train set shape   
+6    Transformed test set shape   
+7              Numeric features   
+8          Categorical features   
+9                    Preprocess   
+10              Imputation type   
+11           Numeric imputation   
+12       Categorical imputation   
+13     Maximum one-hot encoding   
+14              Encoding method   
+15                Fix imbalance   
+16         Fix imbalance method   
+17                    Normalize   
+18             Normalize method   
+19               Fold Generator   
+20                  Fold Number   
+21                     CPU Jobs   
+22                      Use GPU   
+23               Log Experiment   
+24              Experiment Name   
+25                          USI   
+
+                                                Value  
+0                                                  42  
+1                                         return_flag  
+2                                              Binary  
+3                                         (10000, 16)  
+4                                         (12430, 64)  
+5                                         (10430, 64)  
+6                                          (2000, 64)  
+7                                                   6  
+8                                                   8  
+9                                                True  
+10                                             simple  
+11                                               mean  
+12                                               mode  
+13                                                 25  
+14                                               None  
+15                                               True  
+16  SMOTE(k_neighbors=5, n_jobs=None, random_state...  
+17                                               True  
+18                                             zscore  
+19                                    StratifiedKFold  
+20                                                 10  
+21                                                 -1  
+22                                              False  
+23                                              False  
+24                                   clf-default-name  
+25                                               7b89  
+2026-01-18 22:56:52,998:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:52,998:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:53,100:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-01-18 22:56:53,100:INFO:Soft dependency imported: catboost: 1.2.3
+2026-01-18 22:56:53,100:INFO:setup() successfully completed in 13.63s...............
+2026-01-18 22:57:13,205:INFO:Initializing compare_models()
+2026-01-18 22:57:13,205:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, include=None, fold=None, round=4, cross_validation=True, sort=Recall, n_select=5, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Recall', 'n_select': 5, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2026-01-18 22:57:13,205:INFO:Checking exceptions
+2026-01-18 22:57:13,218:INFO:Preparing display monitor
+2026-01-18 22:57:13,261:INFO:Initializing Logistic Regression
+2026-01-18 22:57:13,262:INFO:Total runtime is 1.693566640218099e-05 minutes
+2026-01-18 22:57:13,266:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:13,268:INFO:Initializing create_model()
+2026-01-18 22:57:13,268:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:13,268:INFO:Checking exceptions
+2026-01-18 22:57:13,268:INFO:Importing libraries
+2026-01-18 22:57:13,268:INFO:Copying training dataset
+2026-01-18 22:57:13,282:INFO:Defining folds
+2026-01-18 22:57:13,282:INFO:Declaring metric variables
+2026-01-18 22:57:13,288:INFO:Importing untrained model
+2026-01-18 22:57:13,294:INFO:Logistic Regression Imported successfully
+2026-01-18 22:57:13,300:INFO:Starting cross validation
+2026-01-18 22:57:13,307:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:24,423:INFO:Calculating mean and std
+2026-01-18 22:57:24,450:INFO:Creating metrics dataframe
+2026-01-18 22:57:24,485:INFO:Uploading results into container
+2026-01-18 22:57:24,489:INFO:Uploading model into container now
+2026-01-18 22:57:24,495:INFO:_master_model_container: 1
+2026-01-18 22:57:24,495:INFO:_display_container: 2
+2026-01-18 22:57:24,498:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-01-18 22:57:24,498:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:25,310:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:25,312:INFO:Creating metrics dataframe
+2026-01-18 22:57:25,320:INFO:Initializing K Neighbors Classifier
+2026-01-18 22:57:25,320:INFO:Total runtime is 0.2009845813115438 minutes
+2026-01-18 22:57:25,325:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:25,325:INFO:Initializing create_model()
+2026-01-18 22:57:25,326:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:25,326:INFO:Checking exceptions
+2026-01-18 22:57:25,326:INFO:Importing libraries
+2026-01-18 22:57:25,326:INFO:Copying training dataset
+2026-01-18 22:57:25,330:INFO:Defining folds
+2026-01-18 22:57:25,330:INFO:Declaring metric variables
+2026-01-18 22:57:25,339:INFO:Importing untrained model
+2026-01-18 22:57:25,345:INFO:K Neighbors Classifier Imported successfully
+2026-01-18 22:57:25,353:INFO:Starting cross validation
+2026-01-18 22:57:25,357:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:29,605:INFO:Calculating mean and std
+2026-01-18 22:57:29,607:INFO:Creating metrics dataframe
+2026-01-18 22:57:29,609:INFO:Uploading results into container
+2026-01-18 22:57:29,611:INFO:Uploading model into container now
+2026-01-18 22:57:29,611:INFO:_master_model_container: 2
+2026-01-18 22:57:29,611:INFO:_display_container: 2
+2026-01-18 22:57:29,611:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2026-01-18 22:57:29,611:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:29,814:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:29,814:INFO:Creating metrics dataframe
+2026-01-18 22:57:29,824:INFO:Initializing Naive Bayes
+2026-01-18 22:57:29,824:INFO:Total runtime is 0.2760527849197388 minutes
+2026-01-18 22:57:29,828:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:29,828:INFO:Initializing create_model()
+2026-01-18 22:57:29,828:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:29,828:INFO:Checking exceptions
+2026-01-18 22:57:29,828:INFO:Importing libraries
+2026-01-18 22:57:29,828:INFO:Copying training dataset
+2026-01-18 22:57:29,832:INFO:Defining folds
+2026-01-18 22:57:29,832:INFO:Declaring metric variables
+2026-01-18 22:57:29,842:INFO:Importing untrained model
+2026-01-18 22:57:29,843:INFO:Naive Bayes Imported successfully
+2026-01-18 22:57:29,853:INFO:Starting cross validation
+2026-01-18 22:57:29,857:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:31,135:INFO:Calculating mean and std
+2026-01-18 22:57:31,137:INFO:Creating metrics dataframe
+2026-01-18 22:57:31,142:INFO:Uploading results into container
+2026-01-18 22:57:31,143:INFO:Uploading model into container now
+2026-01-18 22:57:31,143:INFO:_master_model_container: 3
+2026-01-18 22:57:31,143:INFO:_display_container: 2
+2026-01-18 22:57:31,143:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2026-01-18 22:57:31,143:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:31,339:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:31,339:INFO:Creating metrics dataframe
+2026-01-18 22:57:31,350:INFO:Initializing Decision Tree Classifier
+2026-01-18 22:57:31,351:INFO:Total runtime is 0.30151023070017496 minutes
+2026-01-18 22:57:31,353:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:31,355:INFO:Initializing create_model()
+2026-01-18 22:57:31,355:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:31,355:INFO:Checking exceptions
+2026-01-18 22:57:31,355:INFO:Importing libraries
+2026-01-18 22:57:31,355:INFO:Copying training dataset
+2026-01-18 22:57:31,361:INFO:Defining folds
+2026-01-18 22:57:31,361:INFO:Declaring metric variables
+2026-01-18 22:57:31,370:INFO:Importing untrained model
+2026-01-18 22:57:31,374:INFO:Decision Tree Classifier Imported successfully
+2026-01-18 22:57:31,382:INFO:Starting cross validation
+2026-01-18 22:57:31,384:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:32,718:INFO:Calculating mean and std
+2026-01-18 22:57:32,720:INFO:Creating metrics dataframe
+2026-01-18 22:57:32,724:INFO:Uploading results into container
+2026-01-18 22:57:32,724:INFO:Uploading model into container now
+2026-01-18 22:57:32,724:INFO:_master_model_container: 4
+2026-01-18 22:57:32,724:INFO:_display_container: 2
+2026-01-18 22:57:32,724:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=42, splitter='best')
+2026-01-18 22:57:32,724:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:32,908:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:32,908:INFO:Creating metrics dataframe
+2026-01-18 22:57:32,918:INFO:Initializing SVM - Linear Kernel
+2026-01-18 22:57:32,918:INFO:Total runtime is 0.3276151537895203 minutes
+2026-01-18 22:57:32,918:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:32,918:INFO:Initializing create_model()
+2026-01-18 22:57:32,918:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:32,918:INFO:Checking exceptions
+2026-01-18 22:57:32,918:INFO:Importing libraries
+2026-01-18 22:57:32,918:INFO:Copying training dataset
+2026-01-18 22:57:32,934:INFO:Defining folds
+2026-01-18 22:57:32,934:INFO:Declaring metric variables
+2026-01-18 22:57:32,938:INFO:Importing untrained model
+2026-01-18 22:57:32,943:INFO:SVM - Linear Kernel Imported successfully
+2026-01-18 22:57:32,952:INFO:Starting cross validation
+2026-01-18 22:57:32,960:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:34,860:INFO:Calculating mean and std
+2026-01-18 22:57:34,861:INFO:Creating metrics dataframe
+2026-01-18 22:57:34,865:INFO:Uploading results into container
+2026-01-18 22:57:34,866:INFO:Uploading model into container now
+2026-01-18 22:57:34,866:INFO:_master_model_container: 5
+2026-01-18 22:57:34,866:INFO:_display_container: 2
+2026-01-18 22:57:34,868:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-01-18 22:57:34,868:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:35,061:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:35,067:INFO:Creating metrics dataframe
+2026-01-18 22:57:35,076:INFO:Initializing Ridge Classifier
+2026-01-18 22:57:35,076:INFO:Total runtime is 0.3635834058125814 minutes
+2026-01-18 22:57:35,076:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:35,080:INFO:Initializing create_model()
+2026-01-18 22:57:35,080:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:35,080:INFO:Checking exceptions
+2026-01-18 22:57:35,080:INFO:Importing libraries
+2026-01-18 22:57:35,080:INFO:Copying training dataset
+2026-01-18 22:57:35,087:INFO:Defining folds
+2026-01-18 22:57:35,087:INFO:Declaring metric variables
+2026-01-18 22:57:35,093:INFO:Importing untrained model
+2026-01-18 22:57:35,095:INFO:Ridge Classifier Imported successfully
+2026-01-18 22:57:35,104:INFO:Starting cross validation
+2026-01-18 22:57:35,107:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:36,269:INFO:Calculating mean and std
+2026-01-18 22:57:36,271:INFO:Creating metrics dataframe
+2026-01-18 22:57:36,275:INFO:Uploading results into container
+2026-01-18 22:57:36,276:INFO:Uploading model into container now
+2026-01-18 22:57:36,277:INFO:_master_model_container: 6
+2026-01-18 22:57:36,277:INFO:_display_container: 2
+2026-01-18 22:57:36,277:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2026-01-18 22:57:36,277:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:36,488:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:36,488:INFO:Creating metrics dataframe
+2026-01-18 22:57:36,493:INFO:Initializing Random Forest Classifier
+2026-01-18 22:57:36,493:INFO:Total runtime is 0.3872077624003093 minutes
+2026-01-18 22:57:36,505:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:36,505:INFO:Initializing create_model()
+2026-01-18 22:57:36,505:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:36,505:INFO:Checking exceptions
+2026-01-18 22:57:36,505:INFO:Importing libraries
+2026-01-18 22:57:36,505:INFO:Copying training dataset
+2026-01-18 22:57:36,508:INFO:Defining folds
+2026-01-18 22:57:36,508:INFO:Declaring metric variables
+2026-01-18 22:57:36,518:INFO:Importing untrained model
+2026-01-18 22:57:36,521:INFO:Random Forest Classifier Imported successfully
+2026-01-18 22:57:36,532:INFO:Starting cross validation
+2026-01-18 22:57:36,535:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:39,836:INFO:Calculating mean and std
+2026-01-18 22:57:39,838:INFO:Creating metrics dataframe
+2026-01-18 22:57:39,839:INFO:Uploading results into container
+2026-01-18 22:57:39,841:INFO:Uploading model into container now
+2026-01-18 22:57:39,841:INFO:_master_model_container: 7
+2026-01-18 22:57:39,841:INFO:_display_container: 2
+2026-01-18 22:57:39,841:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2026-01-18 22:57:39,841:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:40,042:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:40,043:INFO:Creating metrics dataframe
+2026-01-18 22:57:40,061:INFO:Initializing Quadratic Discriminant Analysis
+2026-01-18 22:57:40,061:INFO:Total runtime is 0.44667346080144255 minutes
+2026-01-18 22:57:40,061:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:40,061:INFO:Initializing create_model()
+2026-01-18 22:57:40,061:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:40,061:INFO:Checking exceptions
+2026-01-18 22:57:40,061:INFO:Importing libraries
+2026-01-18 22:57:40,061:INFO:Copying training dataset
+2026-01-18 22:57:40,076:INFO:Defining folds
+2026-01-18 22:57:40,076:INFO:Declaring metric variables
+2026-01-18 22:57:40,076:INFO:Importing untrained model
+2026-01-18 22:57:40,087:INFO:Quadratic Discriminant Analysis Imported successfully
+2026-01-18 22:57:40,092:INFO:Starting cross validation
+2026-01-18 22:57:40,096:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,295:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,297:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,297:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,369:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2026-01-18 22:57:41,504:INFO:Calculating mean and std
+2026-01-18 22:57:41,504:INFO:Creating metrics dataframe
+2026-01-18 22:57:41,509:INFO:Uploading results into container
+2026-01-18 22:57:41,509:INFO:Uploading model into container now
+2026-01-18 22:57:41,509:INFO:_master_model_container: 8
+2026-01-18 22:57:41,509:INFO:_display_container: 2
+2026-01-18 22:57:41,509:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2026-01-18 22:57:41,509:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:41,697:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:41,697:INFO:Creating metrics dataframe
+2026-01-18 22:57:41,710:INFO:Initializing Ada Boost Classifier
+2026-01-18 22:57:41,710:INFO:Total runtime is 0.47416236797968553 minutes
+2026-01-18 22:57:41,713:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:41,713:INFO:Initializing create_model()
+2026-01-18 22:57:41,713:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:41,713:INFO:Checking exceptions
+2026-01-18 22:57:41,713:INFO:Importing libraries
+2026-01-18 22:57:41,717:INFO:Copying training dataset
+2026-01-18 22:57:41,723:INFO:Defining folds
+2026-01-18 22:57:41,723:INFO:Declaring metric variables
+2026-01-18 22:57:41,729:INFO:Importing untrained model
+2026-01-18 22:57:41,732:INFO:Ada Boost Classifier Imported successfully
+2026-01-18 22:57:41,741:INFO:Starting cross validation
+2026-01-18 22:57:41,745:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:42,653:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,653:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,653:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,659:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,659:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,665:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,691:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,703:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,733:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:42,733:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2026-01-18 22:57:44,793:INFO:Calculating mean and std
+2026-01-18 22:57:44,795:INFO:Creating metrics dataframe
+2026-01-18 22:57:44,797:INFO:Uploading results into container
+2026-01-18 22:57:44,799:INFO:Uploading model into container now
+2026-01-18 22:57:44,799:INFO:_master_model_container: 9
+2026-01-18 22:57:44,799:INFO:_display_container: 2
+2026-01-18 22:57:44,799:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=42)
+2026-01-18 22:57:44,799:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:44,977:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:44,977:INFO:Creating metrics dataframe
+2026-01-18 22:57:44,987:INFO:Initializing Gradient Boosting Classifier
+2026-01-18 22:57:44,989:INFO:Total runtime is 0.5287981033325196 minutes
+2026-01-18 22:57:44,993:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:44,993:INFO:Initializing create_model()
+2026-01-18 22:57:44,993:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:44,993:INFO:Checking exceptions
+2026-01-18 22:57:44,993:INFO:Importing libraries
+2026-01-18 22:57:44,993:INFO:Copying training dataset
+2026-01-18 22:57:45,002:INFO:Defining folds
+2026-01-18 22:57:45,002:INFO:Declaring metric variables
+2026-01-18 22:57:45,002:INFO:Importing untrained model
+2026-01-18 22:57:45,011:INFO:Gradient Boosting Classifier Imported successfully
+2026-01-18 22:57:45,013:INFO:Starting cross validation
+2026-01-18 22:57:45,023:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:50,821:INFO:Calculating mean and std
+2026-01-18 22:57:50,821:INFO:Creating metrics dataframe
+2026-01-18 22:57:50,825:INFO:Uploading results into container
+2026-01-18 22:57:50,826:INFO:Uploading model into container now
+2026-01-18 22:57:50,827:INFO:_master_model_container: 10
+2026-01-18 22:57:50,827:INFO:_display_container: 2
+2026-01-18 22:57:50,828:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=42, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2026-01-18 22:57:50,828:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:50,988:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:50,988:INFO:Creating metrics dataframe
+2026-01-18 22:57:50,997:INFO:Initializing Linear Discriminant Analysis
+2026-01-18 22:57:50,997:INFO:Total runtime is 0.6289401491483053 minutes
+2026-01-18 22:57:50,998:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:50,998:INFO:Initializing create_model()
+2026-01-18 22:57:50,998:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:50,998:INFO:Checking exceptions
+2026-01-18 22:57:50,998:INFO:Importing libraries
+2026-01-18 22:57:50,998:INFO:Copying training dataset
+2026-01-18 22:57:51,004:INFO:Defining folds
+2026-01-18 22:57:51,004:INFO:Declaring metric variables
+2026-01-18 22:57:51,013:INFO:Importing untrained model
+2026-01-18 22:57:51,017:INFO:Linear Discriminant Analysis Imported successfully
+2026-01-18 22:57:51,022:INFO:Starting cross validation
+2026-01-18 22:57:51,029:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:52,338:INFO:Calculating mean and std
+2026-01-18 22:57:52,338:INFO:Creating metrics dataframe
+2026-01-18 22:57:52,342:INFO:Uploading results into container
+2026-01-18 22:57:52,342:INFO:Uploading model into container now
+2026-01-18 22:57:52,342:INFO:_master_model_container: 11
+2026-01-18 22:57:52,342:INFO:_display_container: 2
+2026-01-18 22:57:52,342:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2026-01-18 22:57:52,344:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:52,501:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:52,501:INFO:Creating metrics dataframe
+2026-01-18 22:57:52,507:INFO:Initializing Extra Trees Classifier
+2026-01-18 22:57:52,507:INFO:Total runtime is 0.6541025678316753 minutes
+2026-01-18 22:57:52,514:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:52,517:INFO:Initializing create_model()
+2026-01-18 22:57:52,517:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:52,517:INFO:Checking exceptions
+2026-01-18 22:57:52,517:INFO:Importing libraries
+2026-01-18 22:57:52,517:INFO:Copying training dataset
+2026-01-18 22:57:52,530:INFO:Defining folds
+2026-01-18 22:57:52,530:INFO:Declaring metric variables
+2026-01-18 22:57:52,533:INFO:Importing untrained model
+2026-01-18 22:57:52,536:INFO:Extra Trees Classifier Imported successfully
+2026-01-18 22:57:52,544:INFO:Starting cross validation
+2026-01-18 22:57:52,545:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:57:55,575:INFO:Calculating mean and std
+2026-01-18 22:57:55,577:INFO:Creating metrics dataframe
+2026-01-18 22:57:55,579:INFO:Uploading results into container
+2026-01-18 22:57:55,579:INFO:Uploading model into container now
+2026-01-18 22:57:55,579:INFO:_master_model_container: 12
+2026-01-18 22:57:55,579:INFO:_display_container: 2
+2026-01-18 22:57:55,580:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=42, verbose=0,
+                     warm_start=False)
+2026-01-18 22:57:55,580:INFO:create_model() successfully completed......................................
+2026-01-18 22:57:55,719:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:57:55,719:INFO:Creating metrics dataframe
+2026-01-18 22:57:55,740:INFO:Initializing Extreme Gradient Boosting
+2026-01-18 22:57:55,740:INFO:Total runtime is 0.7079923629760743 minutes
+2026-01-18 22:57:55,745:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:57:55,745:INFO:Initializing create_model()
+2026-01-18 22:57:55,745:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:57:55,745:INFO:Checking exceptions
+2026-01-18 22:57:55,745:INFO:Importing libraries
+2026-01-18 22:57:55,745:INFO:Copying training dataset
+2026-01-18 22:57:55,754:INFO:Defining folds
+2026-01-18 22:57:55,754:INFO:Declaring metric variables
+2026-01-18 22:57:55,759:INFO:Importing untrained model
+2026-01-18 22:57:55,762:INFO:Extreme Gradient Boosting Imported successfully
+2026-01-18 22:57:55,771:INFO:Starting cross validation
+2026-01-18 22:57:55,775:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:58:03,363:INFO:Calculating mean and std
+2026-01-18 22:58:03,365:INFO:Creating metrics dataframe
+2026-01-18 22:58:03,368:INFO:Uploading results into container
+2026-01-18 22:58:03,370:INFO:Uploading model into container now
+2026-01-18 22:58:03,370:INFO:_master_model_container: 13
+2026-01-18 22:58:03,370:INFO:_display_container: 2
+2026-01-18 22:58:03,371:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=-1,
+              num_parallel_tree=None, objective='binary:logistic',
+              predictor=None, random_state=42, reg_alpha=None, ...)
+2026-01-18 22:58:03,371:INFO:create_model() successfully completed......................................
+2026-01-18 22:58:03,518:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:58:03,518:INFO:Creating metrics dataframe
+2026-01-18 22:58:03,531:INFO:Initializing Light Gradient Boosting Machine
+2026-01-18 22:58:03,531:INFO:Total runtime is 0.8378303011258443 minutes
+2026-01-18 22:58:03,531:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:58:03,531:INFO:Initializing create_model()
+2026-01-18 22:58:03,531:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:58:03,531:INFO:Checking exceptions
+2026-01-18 22:58:03,531:INFO:Importing libraries
+2026-01-18 22:58:03,531:INFO:Copying training dataset
+2026-01-18 22:58:03,546:INFO:Defining folds
+2026-01-18 22:58:03,546:INFO:Declaring metric variables
+2026-01-18 22:58:03,552:INFO:Importing untrained model
+2026-01-18 22:58:03,552:INFO:Light Gradient Boosting Machine Imported successfully
+2026-01-18 22:58:03,564:INFO:Starting cross validation
+2026-01-18 22:58:03,566:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:58:07,895:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py:547: FitFailedWarning: 
+3 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 256, in _fit
+    X, y = self._memory_transform(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 80, in _transform_one
+    output = transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 263, in transform
+    new_X = self._prepare_df(X, output)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 192, in _prepare_df
+    out = to_df(out, index=X.index, columns=columns)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\utils\generic.py", line 109, in to_df
+    data = data.rename(columns=lambda col: str(col))
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 5518, in rename
+    return super()._rename(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 1059, in _rename
+    result = self if inplace else self.copy(deep=copy and not using_copy_on_write())
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 6685, in copy
+    data = self._mgr.copy(deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 576, in copy
+    res = self.apply("copy", deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\blocks.py", line 645, in copy
+    values = values.copy()
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 4.51 MiB for an array with shape (63, 9387) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 256, in _fit
+    X, y = self._memory_transform(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 80, in _transform_one
+    output = transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 255, in transform
+    output = self.transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 268, in get_dummies
+    base_df = base_df.set_index(X.index)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 5876, in set_index
+    frame = self.copy(deep=None)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 6685, in copy
+    data = self._mgr.copy(deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 256, in _fit
+    X, y = self._memory_transform(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 80, in _transform_one
+    output = transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 255, in transform
+    output = self.transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2026-01-18 22:58:07,895:INFO:Calculating mean and std
+2026-01-18 22:58:07,895:INFO:Creating metrics dataframe
+2026-01-18 22:58:07,895:INFO:Uploading results into container
+2026-01-18 22:58:07,895:INFO:Uploading model into container now
+2026-01-18 22:58:07,895:INFO:_master_model_container: 14
+2026-01-18 22:58:07,895:INFO:_display_container: 2
+2026-01-18 22:58:07,895:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, silent='warn',
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0)
+2026-01-18 22:58:07,895:INFO:create_model() successfully completed......................................
+2026-01-18 22:58:08,139:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:58:08,139:INFO:Creating metrics dataframe
+2026-01-18 22:58:08,157:INFO:Initializing CatBoost Classifier
+2026-01-18 22:58:08,157:INFO:Total runtime is 0.9149390856424968 minutes
+2026-01-18 22:58:08,165:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:58:08,165:INFO:Initializing create_model()
+2026-01-18 22:58:08,165:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=catboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:58:08,165:INFO:Checking exceptions
+2026-01-18 22:58:08,165:INFO:Importing libraries
+2026-01-18 22:58:08,165:INFO:Copying training dataset
+2026-01-18 22:58:08,170:INFO:Defining folds
+2026-01-18 22:58:08,170:INFO:Declaring metric variables
+2026-01-18 22:58:08,187:INFO:Importing untrained model
+2026-01-18 22:58:08,206:INFO:CatBoost Classifier Imported successfully
+2026-01-18 22:58:08,215:INFO:Starting cross validation
+2026-01-18 22:58:08,223:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:58:33,517:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py:547: FitFailedWarning: 
+9 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+2 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 278, in fit
+    fitted_estimator = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 5201, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 2396, in _fit
+    self._train(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 1776, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4833, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4882, in _catboost._CatBoost._train
+_catboost.CatBoostError: C:/Go_Agent/pipelines/BuildMaster/catboost.git/catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: catboost_info
+
+--------------------------------------------------------------------------------
+2 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2242, in _merge_blocks
+    new_values = np.vstack([b.values for b in blocks])  # type: ignore[misc]
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 278, in fit
+    fitted_estimator = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 5201, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 2396, in _fit
+    self._train(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\catboost\core.py", line 1776, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4833, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4882, in _catboost._CatBoost._train
+_catboost.CatBoostError: bad allocation
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2026-01-18 22:58:33,524:INFO:Calculating mean and std
+2026-01-18 22:58:33,539:INFO:Creating metrics dataframe
+2026-01-18 22:58:33,550:INFO:Uploading results into container
+2026-01-18 22:58:33,550:INFO:Uploading model into container now
+2026-01-18 22:58:33,555:INFO:_master_model_container: 15
+2026-01-18 22:58:33,555:INFO:_display_container: 2
+2026-01-18 22:58:33,555:INFO:<catboost.core.CatBoostClassifier object at 0x000001F5D526B100>
+2026-01-18 22:58:33,555:INFO:create_model() successfully completed......................................
+2026-01-18 22:58:34,038:WARNING:create_model() for <catboost.core.CatBoostClassifier object at 0x000001F5D526B100> raised an exception or returned all 0.0, trying without fit_kwargs:
+2026-01-18 22:58:34,050:WARNING:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 796, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 22:58:34,050:INFO:Initializing create_model()
+2026-01-18 22:58:34,050:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=catboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:58:34,050:INFO:Checking exceptions
+2026-01-18 22:58:34,050:INFO:Importing libraries
+2026-01-18 22:58:34,050:INFO:Copying training dataset
+2026-01-18 22:58:34,070:INFO:Defining folds
+2026-01-18 22:58:34,070:INFO:Declaring metric variables
+2026-01-18 22:58:34,075:INFO:Importing untrained model
+2026-01-18 22:58:34,081:INFO:CatBoost Classifier Imported successfully
+2026-01-18 22:58:34,089:INFO:Starting cross validation
+2026-01-18 22:58:34,097:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 22:59:54,396:INFO:Calculating mean and std
+2026-01-18 22:59:54,481:INFO:Creating metrics dataframe
+2026-01-18 22:59:54,611:INFO:Uploading results into container
+2026-01-18 22:59:54,629:INFO:Uploading model into container now
+2026-01-18 22:59:54,653:INFO:_master_model_container: 16
+2026-01-18 22:59:54,653:INFO:_display_container: 2
+2026-01-18 22:59:54,653:INFO:<catboost.core.CatBoostClassifier object at 0x000001F5D5360220>
+2026-01-18 22:59:54,653:INFO:create_model() successfully completed......................................
+2026-01-18 22:59:59,659:INFO:SubProcess create_model() end ==================================
+2026-01-18 22:59:59,659:INFO:Creating metrics dataframe
+2026-01-18 22:59:59,709:INFO:Initializing Dummy Classifier
+2026-01-18 22:59:59,709:INFO:Total runtime is 2.7741324027379353 minutes
+2026-01-18 22:59:59,724:INFO:SubProcess create_model() called ==================================
+2026-01-18 22:59:59,724:INFO:Initializing create_model()
+2026-01-18 22:59:59,728:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 22:59:59,728:INFO:Checking exceptions
+2026-01-18 22:59:59,728:INFO:Importing libraries
+2026-01-18 22:59:59,733:INFO:Copying training dataset
+2026-01-18 22:59:59,766:INFO:Defining folds
+2026-01-18 22:59:59,766:INFO:Declaring metric variables
+2026-01-18 22:59:59,774:INFO:Importing untrained model
+2026-01-18 22:59:59,781:INFO:Dummy Classifier Imported successfully
+2026-01-18 22:59:59,796:INFO:Starting cross validation
+2026-01-18 22:59:59,807:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 23:00:03,992:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:04,000:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:04,875:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:04,905:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py:547: FitFailedWarning: 
+7 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 256, in _fit
+    X, y = self._memory_transform(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 80, in _transform_one
+    output = transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 255, in transform
+    output = self.transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 536, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\imblearn\base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\imblearn\base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\imblearn\over_sampling\_smote\base.py", line 390, in _fit_resample
+    X_new, y_new = self._make_samples(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\imblearn\over_sampling\_smote\base.py", line 128, in _make_samples
+    X_new = self._generate_samples(X, nn_data, nn_num, rows, cols, steps, y_type, y)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\imblearn\over_sampling\_smote\base.py", line 182, in _generate_samples
+    diffs = nn_data[nn_num[rows, cols]] - X[rows]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.05 MiB for an array with shape (2187, 63) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2242, in _merge_blocks
+    new_values = np.vstack([b.values for b in blocks])  # type: ignore[misc]
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 268, in get_dummies
+    base_df = base_df.set_index(X.index)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 5876, in set_index
+    frame = self.copy(deep=None)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 6685, in copy
+    data = self._mgr.copy(deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2242, in _merge_blocks
+    new_values = np.vstack([b.values for b in blocks])  # type: ignore[misc]
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.97 MiB for an array with shape (54, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 576, in copy
+    res = self.apply("copy", deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\blocks.py", line 645, in copy
+    values = values.copy()
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2026-01-18 23:00:04,905:INFO:Calculating mean and std
+2026-01-18 23:00:04,908:INFO:Creating metrics dataframe
+2026-01-18 23:00:04,915:INFO:Uploading results into container
+2026-01-18 23:00:04,915:INFO:Uploading model into container now
+2026-01-18 23:00:04,917:INFO:_master_model_container: 17
+2026-01-18 23:00:04,917:INFO:_display_container: 2
+2026-01-18 23:00:04,917:INFO:DummyClassifier(constant=None, random_state=42, strategy='prior')
+2026-01-18 23:00:04,917:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:05,311:WARNING:create_model() for DummyClassifier(constant=None, random_state=42, strategy='prior') raised an exception or returned all 0.0, trying without fit_kwargs:
+2026-01-18 23:00:05,313:WARNING:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 796, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:05,313:INFO:Initializing create_model()
+2026-01-18 23:00:05,313:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5D1907BE0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:05,313:INFO:Checking exceptions
+2026-01-18 23:00:05,313:INFO:Importing libraries
+2026-01-18 23:00:05,313:INFO:Copying training dataset
+2026-01-18 23:00:05,346:INFO:Defining folds
+2026-01-18 23:00:05,346:INFO:Declaring metric variables
+2026-01-18 23:00:05,352:INFO:Importing untrained model
+2026-01-18 23:00:05,355:INFO:Dummy Classifier Imported successfully
+2026-01-18 23:00:05,372:INFO:Starting cross validation
+2026-01-18 23:00:05,387:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-01-18 23:00:07,181:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:07,245:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:07,257:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2026-01-18 23:00:07,296:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py:547: FitFailedWarning: 
+7 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.97 MiB for an array with shape (54, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+2 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2242, in _merge_blocks
+    new_values = np.vstack([b.values for b in blocks])  # type: ignore[misc]
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.64 MiB for an array with shape (48, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 268, in get_dummies
+    base_df = base_df.set_index(X.index)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 5876, in set_index
+    frame = self.copy(deep=None)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 6685, in copy
+    data = self._mgr.copy(deep=deep)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2242, in _merge_blocks
+    new_values = np.vstack([b.values for b in blocks])  # type: ignore[misc]
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 249, in _fit
+    fitted_transformer = self._memory_fit(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 69, in _fit_one
+    transformer.fit(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 229, in fit
+    self.transformer.fit(*args, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 315, in fit
+    X_transformed = self.transform(X, override_return_df=True)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\model_selection\_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 273, in fit
+    X, y, _ = self._fit(X, y, routed_params)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 256, in _fit
+    X, y = self._memory_transform(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\joblib\memory.py", line 353, in __call__
+    return self.func(*args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py", line 80, in _transform_one
+    output = transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\preprocess\transformers.py", line 255, in transform
+    output = self.transformer.transform(*args)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\utils.py", line 488, in transform
+    X = self._transform(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 195, in _transform
+    X = self.get_dummies(X)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\category_encoders\one_hot.py", line 269, in get_dummies
+    X = pd.concat([base_df, X], axis=1)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 393, in concat
+    return op.get_result()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\reshape\concat.py", line 680, in get_result
+    new_data = concatenate_managers(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 131, in concatenate_managers
+    mgrs = _maybe_reindex_columns_na_proxy(axes, mgrs_indexers, needs_copy)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\concat.py", line 230, in _maybe_reindex_columns_na_proxy
+    mgr = mgr.copy()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 587, in copy
+    res._consolidate_inplace()
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 1750, in _consolidate_inplace
+    self.blocks = _consolidate(self.blocks)
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2217, in _consolidate
+    merged_blocks, _ = _merge_blocks(
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py", line 2249, in _merge_blocks
+    new_values = new_values[argsort]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.32 MiB for an array with shape (24, 7200) and data type float64
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2026-01-18 23:00:07,297:INFO:Calculating mean and std
+2026-01-18 23:00:07,304:INFO:Creating metrics dataframe
+2026-01-18 23:00:07,309:INFO:Uploading results into container
+2026-01-18 23:00:07,309:INFO:Uploading model into container now
+2026-01-18 23:00:07,309:INFO:_master_model_container: 18
+2026-01-18 23:00:07,309:INFO:_display_container: 2
+2026-01-18 23:00:07,309:INFO:DummyClassifier(constant=None, random_state=42, strategy='prior')
+2026-01-18 23:00:07,311:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:07,539:ERROR:create_model() for DummyClassifier(constant=None, random_state=42, strategy='prior') raised an exception or returned all 0.0:
+2026-01-18 23:00:07,539:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 796, in compare_models
+    assert (
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 817, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:07,540:WARNING:c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:323: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  master_display_.apply(
+
+2026-01-18 23:00:07,556:INFO:Initializing create_model()
+2026-01-18 23:00:07,556:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=GaussianNB(priors=None, var_smoothing=1e-09), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:07,556:INFO:Checking exceptions
+2026-01-18 23:00:07,566:INFO:Importing libraries
+2026-01-18 23:00:07,566:INFO:Copying training dataset
+2026-01-18 23:00:07,581:INFO:Defining folds
+2026-01-18 23:00:07,581:INFO:Declaring metric variables
+2026-01-18 23:00:07,581:INFO:Importing untrained model
+2026-01-18 23:00:07,581:INFO:Declaring custom model
+2026-01-18 23:00:07,581:INFO:Naive Bayes Imported successfully
+2026-01-18 23:00:07,587:INFO:Cross validation set to False
+2026-01-18 23:00:07,587:INFO:Fitting Model
+2026-01-18 23:00:08,320:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2026-01-18 23:00:08,320:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:08,624:ERROR:create_model() for GaussianNB(priors=None, var_smoothing=1e-09) raised an exception or returned all 0.0:
+2026-01-18 23:00:08,624:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:08,640:INFO:Initializing create_model()
+2026-01-18 23:00:08,640:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:08,640:INFO:Checking exceptions
+2026-01-18 23:00:08,643:INFO:Importing libraries
+2026-01-18 23:00:08,644:INFO:Copying training dataset
+2026-01-18 23:00:08,657:INFO:Defining folds
+2026-01-18 23:00:08,657:INFO:Declaring metric variables
+2026-01-18 23:00:08,657:INFO:Importing untrained model
+2026-01-18 23:00:08,657:INFO:Declaring custom model
+2026-01-18 23:00:08,657:INFO:Linear Discriminant Analysis Imported successfully
+2026-01-18 23:00:08,663:INFO:Cross validation set to False
+2026-01-18 23:00:08,663:INFO:Fitting Model
+2026-01-18 23:00:09,135:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2026-01-18 23:00:09,136:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:09,315:ERROR:create_model() for LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001) raised an exception or returned all 0.0:
+2026-01-18 23:00:09,315:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:09,320:INFO:Initializing create_model()
+2026-01-18 23:00:09,320:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:09,320:INFO:Checking exceptions
+2026-01-18 23:00:09,324:INFO:Importing libraries
+2026-01-18 23:00:09,324:INFO:Copying training dataset
+2026-01-18 23:00:09,332:INFO:Defining folds
+2026-01-18 23:00:09,332:INFO:Declaring metric variables
+2026-01-18 23:00:09,332:INFO:Importing untrained model
+2026-01-18 23:00:09,332:INFO:Declaring custom model
+2026-01-18 23:00:09,332:INFO:Ridge Classifier Imported successfully
+2026-01-18 23:00:09,336:INFO:Cross validation set to False
+2026-01-18 23:00:09,336:INFO:Fitting Model
+2026-01-18 23:00:09,709:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2026-01-18 23:00:09,709:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:09,951:ERROR:create_model() for RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001) raised an exception or returned all 0.0:
+2026-01-18 23:00:09,951:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:09,953:INFO:Initializing create_model()
+2026-01-18 23:00:09,953:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:09,953:INFO:Checking exceptions
+2026-01-18 23:00:09,953:INFO:Importing libraries
+2026-01-18 23:00:09,953:INFO:Copying training dataset
+2026-01-18 23:00:09,961:INFO:Defining folds
+2026-01-18 23:00:09,961:INFO:Declaring metric variables
+2026-01-18 23:00:09,961:INFO:Importing untrained model
+2026-01-18 23:00:09,961:INFO:Declaring custom model
+2026-01-18 23:00:09,969:INFO:Logistic Regression Imported successfully
+2026-01-18 23:00:09,969:INFO:Cross validation set to False
+2026-01-18 23:00:09,973:INFO:Fitting Model
+2026-01-18 23:00:10,363:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-01-18 23:00:10,363:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:10,551:ERROR:create_model() for LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False) raised an exception or returned all 0.0:
+2026-01-18 23:00:10,551:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:10,558:INFO:Initializing create_model()
+2026-01-18 23:00:10,558:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5D4861FC0>, estimator=SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-01-18 23:00:10,558:INFO:Checking exceptions
+2026-01-18 23:00:10,565:INFO:Importing libraries
+2026-01-18 23:00:10,565:INFO:Copying training dataset
+2026-01-18 23:00:10,579:INFO:Defining folds
+2026-01-18 23:00:10,579:INFO:Declaring metric variables
+2026-01-18 23:00:10,579:INFO:Importing untrained model
+2026-01-18 23:00:10,579:INFO:Declaring custom model
+2026-01-18 23:00:10,581:INFO:SVM - Linear Kernel Imported successfully
+2026-01-18 23:00:10,585:INFO:Cross validation set to False
+2026-01-18 23:00:10,585:INFO:Fitting Model
+2026-01-18 23:00:14,515:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-01-18 23:00:14,515:INFO:create_model() successfully completed......................................
+2026-01-18 23:00:14,735:ERROR:create_model() for SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) raised an exception or returned all 0.0:
+2026-01-18 23:00:14,735:ERROR:Traceback (most recent call last):
+  File "c:\Users\shrey\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2026-01-18 23:00:14,773:INFO:_master_model_container: 18
+2026-01-18 23:00:14,776:INFO:_display_container: 2
+2026-01-18 23:00:14,777:INFO:[GaussianNB(priors=None, var_smoothing=1e-09), LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001), RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001), LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)]
+2026-01-18 23:00:14,777:INFO:compare_models() successfully completed......................................
